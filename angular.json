@@ -121,8 +121,13 @@
               "devServerTarget": "dataprogramming03Group13-webapp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "dataprogramming03Group13-webapp"
 }
