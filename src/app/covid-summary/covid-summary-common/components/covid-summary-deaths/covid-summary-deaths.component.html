@@ -1,4 +1,6 @@
 <google-chart *ngIf="hasData"
+  [options]="chartOptions"
   [columnNames]="chartColumns"
   [type]="chartType"
-  [data]="chartData"></google-chart>
+  [data]="chartData">
+</google-chart>

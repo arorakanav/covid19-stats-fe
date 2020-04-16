@@ -11,19 +11,19 @@ export class CovidSummaryService {
   constructor(private http: HttpClient) { }
 
   public getConfirmedCases(): Observable<urlData>{
-    let url = "http://0.0.0.0:5000/covidapp/time_series_confirmed_global";
+    let url = "https://dataprogramming03group13-covid.herokuapp.com/covidapp/time_series_confirmed_global";
     return this.http.get<urlData>(url)
     .pipe(map(({data}) => data));
   }
 
   public getDeaths(): Observable<urlData>{
-    let url = "http://0.0.0.0:5000/covidapp/time_series_deaths_global";
+    let url = "https://dataprogramming03group13-covid.herokuapp.com/covidapp/time_series_deaths_global";
     return this.http.get<urlData>(url)
     .pipe(map(({data}) => data));
   }
 
   public getRecovered(): Observable<urlData>{
-    let url = "http://0.0.0.0:5000/covidapp/time_series_recovered_global";
+    let url = "https://dataprogramming03group13-covid.herokuapp.com/covidapp/time_series_recovered_global";
     return this.http.get<urlData>(url)
     .pipe(map(({data}) => data));
   }

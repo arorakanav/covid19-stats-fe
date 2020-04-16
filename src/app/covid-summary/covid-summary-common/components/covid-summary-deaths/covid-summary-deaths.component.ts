@@ -17,7 +17,7 @@ export class CovidSummaryDeadComponent {
   };
 
   public chartType = "Line"
-  public chartColumns = ['Date', 'Confirmed', 'Country']
+  public chartColumns = ['Date', 'Deaths', {type: 'string',role: 'tooltip'}]
   
 
   public get chartData() {
