@@ -18,12 +18,13 @@ import { COVID_SUMMARY_COMPONENTS } from './covid-summary-common/components'
   imports: [
     CovidAppCommponModule,
     CoronavirusRoutingModule,
-    GoogleChartsModule
+    GoogleChartsModule.forRoot(),
   ],
   providers: [CovidSummaryService],
   exports: [
     CovidSummaryPageComponent,
-    CovidSummaryComponent
+    CovidSummaryComponent,
+    GoogleChartsModule,
   ]
 })
 export class CovidSummaryModule { }
