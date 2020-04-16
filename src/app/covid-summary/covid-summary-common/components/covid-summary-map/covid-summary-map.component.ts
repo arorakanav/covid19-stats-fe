@@ -16,7 +16,7 @@ export class CovidSummaryMapComponent {
     hAxis: { textPosition: 'none' }
   };
 
-  public chartType = "Map"
+  public chartType = "GeoChart"
   // public chartColumns = [{label: 'Lat', type: 'number'},
   //   {label: 'Long', type: 'number'},
   //   {label: 'Recovered', type: 'string', role: 'tooltip'},
@@ -30,7 +30,6 @@ export class CovidSummaryMapComponent {
     // {label: 'Deaths', type: 'string', role: 'tooltip'}]
 
   public get chartData() {
-    console.log(this.globalGeoSummary)
     return this.globalGeoSummary
   }
 

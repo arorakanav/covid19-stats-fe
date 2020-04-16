@@ -1,3 +1,4 @@
+<div fxLayout="row">
 <coivd-summary-deaths 
   [deadCases]="deadCases">
 </coivd-summary-deaths>
@@ -7,9 +8,14 @@
 <coivd-summary-recovered
   [recoveredCases]="recoveredCases">
 </coivd-summary-recovered>
+</div>
+<div>
 <coivd-summary-table
   [globalSummary]="globalSummary"
 ></coivd-summary-table>
+</div>
+<div>
 <coivd-summary-map
 [globalGeoSummary]="globalGeoSummary"
 ></coivd-summary-map>
+</div>
