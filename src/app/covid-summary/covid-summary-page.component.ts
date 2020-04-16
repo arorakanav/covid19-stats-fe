@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
     [confirmedCases]="confirmedCases$ | async"
     [deadCases]="deadCases$ | async"
     [recoveredCases]="recoveredCases$ | async"
+    [globalSummary]="globalSummary$ |async"
+    [globalGeoSummary]="globalGeoSummary$ | async"
     ></coivd-summary>`
 })
 
@@ -17,6 +19,8 @@ export class CovidSummaryPageComponent {
   confirmedCases$:Observable<any>;
   deadCases$:Observable<any>;
   recoveredCases$:Observable<any>;
+  globalSummary$:Observable<any>;
+  globalGeoSummary$:Observable<any>;
 
   
   constructor(
@@ -25,5 +29,7 @@ export class CovidSummaryPageComponent {
     this.confirmedCases$ = covidSummaryService.getConfirmedCases()
     this.deadCases$ = covidSummaryService.getDeaths()
     this.recoveredCases$ = covidSummaryService.getRecovered()
+    this.globalSummary$ = covidSummaryService.getGlobalSummary()
+    this.globalGeoSummary$ = covidSummaryService.getGlobalGeoSummary()
   }
 }

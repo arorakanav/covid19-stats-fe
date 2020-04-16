@@ -9,4 +9,6 @@ export class  CovidSummaryComponent {
   @Input() confirmedCases: any;
   @Input() deadCases: any;
   @Input() recoveredCases: any;
+  @Input() globalSummary: any;
+  @Input() globalGeoSummary: any;
 }

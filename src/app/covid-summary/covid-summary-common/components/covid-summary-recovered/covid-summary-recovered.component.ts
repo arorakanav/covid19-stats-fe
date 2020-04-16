@@ -3,26 +3,26 @@ import { reduce } from 'lodash';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'coivd-summary-deaths',
-  templateUrl: './covid-summary-deaths.component.html',
-  styleUrls: ['./covid-summary-deaths.component.scss'],
+  selector: 'coivd-summary-recovered',
+  templateUrl: './covid-summary-recovered.component.html',
+  styleUrls: ['./covid-summary-recovered.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CovidSummaryDeadComponent {
+export class CovidSummaryRecoveredComponent {
 
-  @Input() deadCases: any;
+  @Input() recoveredCases: any;
 
   public chartOptions = {
     hAxis: { textPosition: 'none' }
   };
 
   public chartType = "Line"
-  public chartColumns = ['Date', 'Deaths', {label: 'Country', type: 'string',role: 'tooltip'}]
+  public chartColumns = ['Date', 'Recovered', {type: 'string',role: 'tooltip'}]
   
 
   public get chartData() {
     let parsedData = []
-    parsedData = reduce(this.deadCases, (result = [], value, key) => {
+    parsedData = reduce(this.recoveredCases, (result = [], value, key) => {
       let item = reduce(value, (res = [], val, k) => {
         let date = new Date(key)
         if (k == 'Canada')
@@ -38,7 +38,7 @@ export class CovidSummaryDeadComponent {
   }
 
   public get hasData(): boolean {
-    let result = this.deadCases && this.deadCases !== {};
+    let result = this.recoveredCases && this.recoveredCases !== {};
     return result
   }
 }

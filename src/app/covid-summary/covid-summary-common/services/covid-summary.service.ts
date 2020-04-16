@@ -27,6 +27,18 @@ export class CovidSummaryService {
     return this.http.get<urlData>(url)
     .pipe(map(({data}) => data));
   }
+
+  public getGlobalSummary(): Observable<urlData>{
+    let url = "https://dataprogramming03group13-covid.herokuapp.com/covidapp/time_series_summary_table_global";
+    return this.http.get<urlData>(url)
+    .pipe(map(({data}) => data));
+  }
+
+  public getGlobalGeoSummary(): Observable<urlData>{
+    let url = "https://dataprogramming03group13-covid.herokuapp.com/covidapp/time_series_geo_summary_global";
+    return this.http.get<urlData>(url)
+    .pipe(map(({data}) => data));
+  }
 }
 
 interface urlData {
