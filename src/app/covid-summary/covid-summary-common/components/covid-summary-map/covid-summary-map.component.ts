@@ -17,17 +17,9 @@ export class CovidSummaryMapComponent {
   };
 
   public chartType = "GeoChart"
-  // public chartColumns = [{label: 'Lat', type: 'number'},
-  //   {label: 'Long', type: 'number'},
-  //   {label: 'Recovered', type: 'string', role: 'tooltip'},
-  //   {label: 'Confirmed', type: 'string', role: 'tooltip'},
-  //   {label: 'Deaths', type: 'string', role: 'tooltip'}]
   
-  public chartColumns = [{label: 'Lat', type: 'number'},
-    {label: 'Long', type: 'number'},
-    // {label: 'Recovered', type: 'string', role: 'tooltip'},
-    {label: 'Confirmed', type: 'number', role: 'tooltip'}]
-    // {label: 'Deaths', type: 'string', role: 'tooltip'}]
+  public chartColumns = [{label: 'Country', type: 'string'},
+    {label: 'Confirmed', type: 'number'}]
 
   public get chartData() {
     return this.globalGeoSummary
