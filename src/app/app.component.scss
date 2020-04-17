@@ -1,0 +1,13 @@
+.gap {
+  margin-right: 10px;
+}
+
+mat-toolbar {
+  background: darkgrey;
+  margin-bottom: 16px;
+  font-size: 22px;
+  span {
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
